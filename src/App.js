@@ -1,25 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import Auth from './components/Auth';
+import Layout from './components/Layout';
+import { useDispatch, useSelector } from 'react-redux';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const cartItems = useSelector(state => state.cart.itemsList);
+	console.log(cartItems);
+
+	const isLoggedIn = useSelector(state => state.auth.isLoggedIn);
+	console.log(isLoggedIn);
+
+	return (
+		<div className="App">
+			{!isLoggedIn && <Auth />}
+			{isLoggedIn && <Layout />}
+		</div>
+	);
 }
 
 export default App;
+
