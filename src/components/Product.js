@@ -1,7 +1,8 @@
 import { cartActions } from '../store/cart-slice';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 const Product = ({ name, id, imgURL, price }) => {
+	// hook to call functions in the redux store
 	const dispatch = useDispatch();
 
 	const addToCart = () => {

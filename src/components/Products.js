@@ -39,7 +39,7 @@ const DUMMY_PRODUCTS = [
 
 const Products = () => {
 	return (
-		<div>
+		<div className="Products">
 			<ul className="products-container">
 				{DUMMY_PRODUCTS.map((product, index) => (
 					<li key={index}>

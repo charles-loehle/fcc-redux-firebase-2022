@@ -1,6 +1,15 @@
+import { useDispatch } from 'react-redux';
+import { authActions } from '../store/auth-slice';
 import Cart from './Cart';
 
 const Header = () => {
+	// hook to call functions in the redux store
+	const dispatch = useDispatch();
+
+	const logoutHandler = () => {
+		dispatch(authActions.logout());
+	};
+
 	return (
 		<header>
 			<nav className="header-nav">
@@ -15,6 +24,11 @@ const Header = () => {
 					</li>
 					<li>
 						<Cart />
+					</li>
+					<li>
+						<button onClick={logoutHandler} className="logout-btn">
+							Logout
+						</button>
 					</li>
 				</ul>
 			</nav>

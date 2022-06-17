@@ -2,6 +2,7 @@ import { useDispatch } from 'react-redux';
 import { authActions } from '../store/auth-slice';
 
 const Auth = () => {
+	// hook to call functions in the redux store
 	const dispatch = useDispatch();
 
 	const handleSubmit = e => {

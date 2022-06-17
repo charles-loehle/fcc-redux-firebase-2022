@@ -1,3 +1,14 @@
+body {
+	margin: 0;
+	font-family: 'Lucida Sans';
+}
+
+h1,
+h2,
+p {
+	margin: 0;
+}
+
 .container {
 	max-width: 500px;
 	height: 500px;
@@ -51,22 +62,28 @@ li {
 	position: sticky;
 	box-shadow: 0px 10px 20px #ccc;
 	margin-bottom: 10px;
+	display: flex;
+	justify-content: center;
 }
 .header-ul {
 	display: flex;
 	flex: 1;
 	justify-content: space-between;
+	align-items: center;
+	margin: 0;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	max-width: 1200px;
 }
 .header-h2 {
-	font-family: monospace;
 	font-size: 30px;
 }
 
-.layout {
+/* .layout {
 	display: flex;
 	flex-direction: column;
 	flex: 1;
-}
+} */
 .total-price {
 	text-align: right;
 	margin-right: 50px;
@@ -81,16 +98,23 @@ li {
 	padding: 10px;
 	cursor: pointer;
 }
+
+.CartItems {
+	margin: 0 auto;
+	max-width: 1200px;
+	width: 90%;
+}
+
 .cart-container {
 	border: 1px solid black;
 	border-radius: 10px;
-	margin: 20px;
 	padding: 10px;
 }
 
 .cartItem {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	border: 1px solid black;
 	border-radius: 10px;
 	padding: 20px;
@@ -101,10 +125,16 @@ li {
 }
 .cart-actions {
 	color: white;
-	font-size: 20px;
-	width: 50px;
+	font-size: 2rem;
+	width: 40px;
+	padding: 0;
 	border: none;
 	background: rgb(10, 7, 24);
+}
+
+.Products {
+	display: flex;
+	justify-content: center;
 }
 
 .products-container {
@@ -113,10 +143,9 @@ li {
 	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;
+	max-width: 1200px;
 }
 button {
-	margin-top: 5px;
-	margin-bottom: auto;
 	padding: 10px;
 	color: white;
 	border: none;
